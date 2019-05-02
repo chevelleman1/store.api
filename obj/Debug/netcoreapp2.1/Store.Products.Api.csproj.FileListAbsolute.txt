@@ -1,0 +1,14 @@
+C:\dev_projects\Store.Products.Api\Store.Products.Api\bin\Debug\netcoreapp2.1\Store.Products.Api.deps.json
+C:\dev_projects\Store.Products.Api\Store.Products.Api\bin\Debug\netcoreapp2.1\Store.Products.Api.runtimeconfig.json
+C:\dev_projects\Store.Products.Api\Store.Products.Api\bin\Debug\netcoreapp2.1\Store.Products.Api.runtimeconfig.dev.json
+C:\dev_projects\Store.Products.Api\Store.Products.Api\bin\Debug\netcoreapp2.1\Store.Products.Api.dll
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.csproj.CoreCompileInputs.cache
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.RazorAssemblyInfo.cache
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.RazorAssemblyInfo.cs
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.AssemblyInfoInputs.cache
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.AssemblyInfo.cs
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.RazorTargetAssemblyInfo.cache
+C:\dev_projects\Store.Products.Api\Store.Products.Api\bin\Debug\netcoreapp2.1\Store.Products.Api.pdb
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.dll
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.pdb
+C:\dev_projects\Store.Products.Api\Store.Products.Api\obj\Debug\netcoreapp2.1\Store.Products.Api.csprojAssemblyReference.cache
