@@ -23,16 +23,22 @@ namespace Store.Products.Api.Controllers
             _categoryDataService = categoryDataService;
         }
 
-        // GET: api/Categories
-        [HttpGet]
+        // GET: api/Categories        
         public async Task<IEnumerable<Category>> Get()
         {
             return await _categoryDataService.GetCategoriesAsync();
         }
 
+        // GET: api/Categories
+        [HttpGet("[action]/{searchTerm}")]
+        public async Task<IEnumerable<Category>> GetFilteredCategories(string searchTerm)
+        {
+            return await _categoryDataService.GetFilteredCategories(searchTerm);
+        }
+
         // GET: api/Todo/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Category>> GetCategoryItem(long id)
+        public async Task<ActionResult<Category>> GetCategoryItem(int id)
         {
             var todoItem = await _categoryDataService.GetCategoryAsync(id);
 
@@ -56,14 +62,20 @@ namespace Store.Products.Api.Controllers
 
         // PUT: api/Categories/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Put(int id, [FromBody] Category category)
         {
+            await _categoryDataService.UpdateCategory(id, category);
+
+            return NoContent();
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            await _categoryDataService.DeleteCategory(id);
+            return NoContent();
+
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Store.Products.Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration) 
         {
             Configuration = configuration;
         }
@@ -34,6 +34,7 @@ namespace Store.Products.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<ProductContext>((options) => options.UseSqlServer(Configuration.GetConnectionString("StoreConnectionString")));
+            // adding a comment
             //services.AddDbContext<CategoryContext>((options) => options.UseSqlServer(Configuration.GetConnectionString("StoreConnectionString")));
             services.AddScoped<IProductDataService, ProductDataService>();
             services.AddScoped<ICategoryDataService, CategoryDataService>();

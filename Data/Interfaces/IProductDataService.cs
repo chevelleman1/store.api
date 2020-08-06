@@ -10,6 +10,10 @@ namespace Store.Products.Api.Data.Interfaces
     {
         Task<IEnumerable<Product>> ListProductsAsync();
 
+        Task<IEnumerable<Product>> ListProductsByCategoryIdAsync(int id);
+
+        Task<IEnumerable<Product>> ListProductsByCategoryNameAsync(string categoryName);
+
         Task AddProduct(Product product);
     }
 }

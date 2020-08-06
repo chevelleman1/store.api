@@ -22,7 +22,7 @@ namespace Store.Products.Api.Data
             return categories;
         }
 
-        async Task<Category> ICategoryDataService.GetCategoryAsync(long id)
+        async Task<Category> ICategoryDataService.GetCategoryAsync(int id)
         {
             var category = await _productContext.Categories.FindAsync(id);
             return category;
@@ -32,6 +32,27 @@ namespace Store.Products.Api.Data
         {
             var result = await _productContext.Categories.AddAsync(category);
             _productContext.SaveChanges();   
+        }
+
+    
+
+        public async Task DeleteCategory(int id)
+        {
+            var categoryToDelete = await _productContext.Categories.FindAsync(id);
+            _productContext.Categories.Remove(categoryToDelete);
+            _productContext.SaveChanges();
+        }
+        public async Task UpdateCategory(int id, Category category)
+        {
+            //var categoryToDelete = await _productContext.Categories.FindAsync(id);
+            //_productContext.Categories.AsNoTracking().Where(t => t.Id == id).FirstOrDefault();
+            _productContext.Categories.Update(category);
+             _productContext.SaveChanges();
+        }
+
+        public async Task<IEnumerable<Category>> GetFilteredCategories(string searchTerm)
+        {
+            return await _productContext.Categories.Where(c => c.Name.Contains(searchTerm)).ToListAsync();
         }
     }
 }
